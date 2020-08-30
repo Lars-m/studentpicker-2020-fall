@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Question Picker</title>
+</head>
+
+<body style="padding: 2em;">
+  <div class="container">
+    <p style="font-size:2.2em;" id="title">Random Student Picker</p>
+    <button style="font-size:1.2em;" id="btn-next" type="button" class="btn btn-primary">Get Next Student</button>
+    <button style="font-size:1.2em;" id="btn-clear" type="button" class="btn btn-info">Clear</button>
+    <button style="font-size:1.2em;" id="btn-status" type="button" class="btn btn-secondary">Presentation
+      Status</button>
+    <div id="div-accepted" style="display:none">
+      <p style="font-size: 2em" id="student"></p>
+      <button style="font-size:1.2em;" id="bnt-accept" type="button" class="btn btn-success">Accepts</button>
+    </div>
+    <div id="div-status" style="display:none;width:600px;margin-top:1em;font-size: 1.3em;">
+      <p id="statusHeader" style="font-size: 1.8em;">Curent status for presentations</p>
+      <p><span id="info-for-status-page" >Max "allowed" presentations per student: </span> &nbsp;<span id="tries"
+          style="font-weight: bold;"></span></p>
+      <p style="font-size: 0.8em;font-style: italic;">
+        Pressing (+) or (-) updates the database imediately no matter the value of Max Allowed Presentations
+      </p>
+      <table class="table" style="font-size: 1em;">
+        <thead>
+          <tr>
+            <th id="th-col1">Name</th>
+            <th id="th-col2">Presentations</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+      <button id="btn-inc" type="button" class="btn btn-warning">Increment allowed</button>
+      <button id="btn-dec" type="button" class="btn btn-warning">Decrement allowed</button>
+
+      <button style="margin-top:8px;" id="btn-clear-all" type="button" class="btn btn-danger">Clear All Presentations
+        (this will clear all
+        without any further notice)</button>
+    </div>
+  </div>
+  <script src="code.js"></script>
+</body>
+
+</html>
